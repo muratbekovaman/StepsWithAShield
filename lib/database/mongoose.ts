@@ -1,4 +1,3 @@
-import { error } from 'console';
 import mongoose, {Mongoose} from 'mongoose'
 
 const MONGODB_URL = process.env.MONGODB_URL
@@ -22,7 +21,7 @@ export const connectToDatabase = async() =>{
 
     cached.promise = cached.promise || mongoose.connect(
         MONGODB_URL,{
-            dbName: "Steps with a shield",
+            dbName: "Stepswithashield",
             bufferCommands: false
         }
     )
