@@ -14,10 +14,10 @@ function Footer() {
                 <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">STEPS WITH A SHIELD</span>
             </Link>
             <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-               {navLinks.slice(1,5).map((link)=>{
+               {navLinks.slice(1,5).map((link,index)=>{
                 return( 
                      <li>
-                <Link href={`${link.route}`} className="hover:underline me-4 md:me-6">{link.label}</Link>
+                <Link key={index} href={`${link.route}`} className="hover:underline me-4 md:me-6">{link.label}</Link>
                      </li>
                )})
             }

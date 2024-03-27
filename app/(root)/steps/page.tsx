@@ -9,7 +9,7 @@ function Tips() {
 
         return(
             <div>
-                <TipCard index={index+1} image={`/assets/grid/${tip.path}`} label={tip.label} text={tip.text}/>
+                <TipCard key={index} index={index+1} image={`/assets/grid/${tip.path}`} label={tip.label} text={tip.text}/>
             </div>
         )
     })}
