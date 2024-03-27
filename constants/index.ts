@@ -1,27 +1,25 @@
 export const navLinks = [
-    {
-      label: "Cyber Security",
-      route: "/",
-        
-    },
-    {
-      label: "STEPS",
-      route: "/steps",
-      
-    },
-
-    {
-      label: "Hash Text",
-      route: "/hash",
-        
-    },
-    {
-      label: "Password",
-      route: "/password",
-      
-    },
-
-  ];
+  {
+    label: "Cyber Security",
+    route: "/",
+    id: 1,
+  },
+  {
+    label: "STEPS",
+    route: "/steps",
+    id: 2,
+  },
+  {
+    label: "Hash Text",
+    route: "/hash",
+    id: 3,
+  },
+  {
+    label: "Password",
+    route: "/password",
+    id: 4,
+  },
+];
 
   export const tipsData = [
     {
