@@ -8,11 +8,11 @@ const Grid = () =>{
     return(
 
 <div className="lg:md:grid flex flex-col lg:md:grid-cols-3 gap-10">
-        {tipsData.slice(0,3).map((tip, index)=>{
+        {tipsData.slice(0,3).map((tip)=>{
 
             return(
                 <div>
-                    <GridCard key={index} image={`/assets/grid/${tip.path}`} label={tip.label} text={tip.text}/>
+                    <GridCard key={tip.label} image={`/assets/grid/${tip.path}`} label={tip.label} text={tip.text}/>
                 </div>
             )
         })}
