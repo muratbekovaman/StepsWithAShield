@@ -22,7 +22,7 @@ import { Button } from '../ui/button'
 function MobileNav() {
     const pathName = usePathname()
   return (
-    <header className='header'>
+    <header className='header z-20'>
         <Link href='/' className='flex items-center gap-2 md:py-2'>
         <Image className='width-100' alt='#' src='/assets/icons/icon.png' width={60} height={25} />
 

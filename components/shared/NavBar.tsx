@@ -27,7 +27,7 @@ const NavBar = () => {
         {navLinks.map((link)=>{
           const Active = link.route === pathName
           return(
-            <li key={link.route} className={`navbar-nav_element group ${Active ? "text-primary/60" : "text-white"} `}>
+            <li key={link.route} className={`navbar-nav_element group ${Active ? "underline text-white underline-offset-4" : "text-white"} `}>
              <Link href={link.route} className='navbar-link'>
               {link.label}
              </Link>
