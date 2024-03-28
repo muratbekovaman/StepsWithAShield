@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <br />
+    <a href="https://youtu.be/zgGhzuBZOQg" target="_blank">
+      <img src="https://github.com/muratbekovaman/StepsWithAShield/blob/main/public/assets/banne.jpg" alt="Project Banner">
+    </a>
+  <br />
 
-## Getting Started
+  <div>
+    <img src="https://img.shields.io/badge/-Next_JS_14-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="Next.js" />
+    <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="TypeScript" />
+  </div>
 
-First, run the development server:
+  <h3 align="center">Steps with a shield</h3>
+
+   <div align="center">
+    Проект был создан для Хакатона ITEENS 2024 
+    </div>
+</div>
+
+
+## <a name="tech-stack">⚙️ Мой использованный "FULL" Stack</a>
+
+- Node.js
+- Next.js
+- MONGODB
+- MONGOOSE
+- TypeScript
+- TailwindCSS
+- Shadcn
+- react-hot-toast
+- js-sha256
+
+## <a name="features">🔋 Функций</a>
+
+👉👉 **Аутентификация с Clerk:** Управление пользователями через Clerk, обеспечивая безопасную и эффективную аутентификацию.
+
+👉👉 **Наличие базы данных для
+регистрации и авторизации** Все зарегистрированные пользователи храняться в MONGODB с MONGOOSE (объектное моделирование MongoDB для Node.js.) используется полноценная база данных SQL с запросами
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+##Кэшированное подключение к MONGODB
+export const connectToDatabase = async() =>{
+   
+    if(cached.conn) return cached.conn
+    if(!MONGODB_URL) throw new Error("MongoDB url is missing")
+
+    cached.promise = cached.promise || mongoose.connect(
+        MONGODB_URL,{
+            dbName: "Stepswithashield",
+            bufferCommands: false
+        }
+    )
+    cached.conn = await cached.promise
+    return cached.conn
+
+}
 ```
+👉👉 **ШИФРОВАНИЯ текста** три вида шифрования
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+👉👉 **Генерация паролей**  Разные свойства для генерации
+пароля (длина пароля,
+добавления цифр, символы и тд.
+как в примере)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+👉👉 **Модальные окна** есть 2 или более модальных окон
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+👉👉 **checkbox** В формах используются
+чекбоксы для выбора свойств
+генерации пароля
 
-## Learn More
+👉👉 **Совместимость**   Совместим со всеми актуальными ОС версиями ОС
 
-To learn more about Next.js, take a look at the following resources:
+👉👉 **Актуальная полезная информация** 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+👉👉 **Оптимизация (скорость работы)**  Полная оптимизация
